@@ -1,14 +1,12 @@
 // src/context/FilterContext.js
-import { useState, createContext } from "react"
+import { createContext, useState, useContext } from "react"
 
-// créer et exporter ("named") FilterContext object
-export const FilterContext = createContext()
-
-
+// créer FilterContext object
+const FilterContext = createContext()
 
 export const useFilter = () => {
   const context = useContext(FilterContext)
-  if (context === "undefined") {
+  if (context === undefined) {
     throw new Error(
       `It seems that you are trying to use FilterContext outside of its provider`
     )
@@ -16,8 +14,6 @@ export const useFilter = () => {
   return context
 }
 
-
-/* le component-provider qui embrassera la partie de notre app où on utilise ce context */
 export const FilterContextProvider = ({ children }) => {
   const [filter, setFilter] = useState("all")
   return (

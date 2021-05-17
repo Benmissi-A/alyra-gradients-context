@@ -3,7 +3,7 @@ import React from "react"
 import Gradients from "./components/Gradients"
 import GradientsHeader from "./components/GradientsHeader"
 import Footer from "./components/Footer"
-import { FilterContextProvider } from "./context/FilterContext"
+import { FilterContextProvider } from "./components/context/FilterContext"
 
 function App() {
   return (

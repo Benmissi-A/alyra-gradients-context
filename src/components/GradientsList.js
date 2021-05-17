@@ -2,7 +2,7 @@
 import { useContext } from "react"
 import { gradients } from "./../gradients"
 import Gradient from "./Gradient"
-import { FilterContext } from "./../context/FilterContext"
+import { FilterContext } from "./context/FilterContext"
 
 const GradientsList = props => {
   const { filter } = useContext(FilterContext)
